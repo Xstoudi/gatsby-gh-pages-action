@@ -4,10 +4,7 @@ on:
   release:
     types: [published, edited]
 
-permissions:
-  contents: read
-  issues: write
-  pull-requests: write
+permissions: write-all
 
 jobs:
   build:
@@ -23,4 +20,4 @@ jobs:
       - name: Tag
         uses: JasonEtco/build-and-tag-action@v1
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.GITHUB_TOKEN }}
