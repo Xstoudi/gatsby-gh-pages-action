@@ -20,4 +20,4 @@ jobs:
       - name: Tag
         uses: JasonEtco/build-and-tag-action@v1
         env:
-          GITHUB_TOKEN: ${{ github.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
